@@ -9,7 +9,7 @@ A lightweight and efficient backend web server built using **FastAPI** and **Mon
 
 - ⚡    FastAPI for high-performance async API routes  
 - 🍃    MongoDB Atlas integration for cloud-hosted NoSQL storage  
-- 🛠️   Clean structure and support for `.env` secrets  
+- 🛠️    Clean structure and support for `.env` secrets  
 - ♻    Auto-reload server on code changes during development
 - 🐳    Dockerized for easy deployment and environment consistency
 
@@ -62,17 +62,11 @@ docker run -d -p 8000:8000 --env-file .env fastapi-todo-app
 
 #### Mac 
 ```bash
-docker run -d -p 8000:8000 \
-  -v $(pwd):/app \
-  --env-file .env \
-  fastapi-todo-app uvicorn main:app --reload --host 0.0.0.0 --port 8000
+docker run -d -p 8000:8000 -v $(pwd):/app --env-file .env fastapi-todo-app uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 #### Windows 
 ```bash
-docker run -d -p 8000:8000 \
-  -v %cd%:/app \
-  --env-file .env \
-  fastapi-todo-app uvicorn main:app --reload --host 0.0.0.0 --port 8000
+docker run -d -p 8000:8000 -v %cd%:/app --env-file .env fastapi-todo-app uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 Notes
@@ -90,9 +84,7 @@ Notes
 ### 🚀 Production Without live reload
 
 ```bash
-docker run -d -p 8000:8000 \
-  --env-file .env \
-  fastapi-todo-app uvicorn main:app --host 0.0.0.0 --port 8000
+docker run -d -p 8000:8000 --env-file .env fastapi-todo-app uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
 #### Build docker container with the name fastapi using the dockerfile from the root dir:
