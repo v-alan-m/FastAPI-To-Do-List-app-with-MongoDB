@@ -1,4 +1,4 @@
-# 🧠 - FastAPI To-Do List app with MongoDB
+# 🧠 FastAPI To-Do List app with MongoDB
 
 
 A lightweight and efficient backend web server built using **FastAPI** and **MongoDB**, ideal for modern Python-based RESTful APIs.
